@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About Page
+{% endblock %}
+
+{% block content %}
+<div class="row" style="width: 100%;">
+    <div class="col-lg-4">
+        <div class="d-flex flex-column container mt-5 ms-5">
+
+            <a href="{{ url_for('about_page') }}">
+                <button class="button-about mb-4 mt-5">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            About BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+            
+            <a href="{{ url_for('principal_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+            <a href="{{ url_for('vice_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Vice Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="col-lg-8 abt-right ps-5 me-0">
+
+        <h3 class="mt-5">About BIT</h3>
+        <div class="trapezoid-about"></div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{{ url_for('static', filename='images/about-bit-1.jpg') }}" alt="BIT photo" width="100%">
+            </div>
+            <div class="col-lg-8">
+                <p class="abt  mt-5">
+                    Bangalore Institute of Technology (BIT) was established in the year 1979 with an objective of
+                    providing
+                    quality education in the ﬁeld of technology and thereby serving the society. It has reached an
+                    enviable
+                    level of excellence in technical education. This was achieved due to the unconditional support of
+                    Rajya
+                    Vokkaligara Sangha, committed staff and students. The environment of BIT motivates the student to
+                    quench
+                    their thirst for knowledge.
+                </p>
+            </div>
+            <p class="abt mt-3">
+                The college strives to achieve the all-round development of the students. BIT has always been at the
+                forefront of modern technology and has the distinction of being the ﬁrst College to introduce a
+                full-ﬂedged degree in Computer Science and Engineering in Karnataka. The institute has visualized the
+                areas of future growth and incorporated various courses over the years. At present BIT has 13
+                undergraduate, 6 postgraduate and 13 research and development centers affiliated to Visvesvaraya
+                Technological University, Approved by All India Council for Technical Education (AICTE), New Delhi,
+                Recognized by University Grants Commission (UGC) as per the act 1956 under 2f and 12b, accredited by NBA
+                (9 UG Programs and MCA) and ranked by National Institutional Ranking Framework (NIRF) (Band: 251-300).
+                <br><br>
+                BIT has an intake of 1452 students. BIT has 13 R & D centres, centre of excellence in each department,
+                Incubation, startup, Idea lab, Skill development and other supportive and nurturing centres. These
+                centers help faculty and students to carry out interdisciplinary research and collaborative programs in
+                association with organizations like Bosch, Mistral, UnicornMark, GTURNS Data Consultants Pvt., Ltd and
+                many more. BIT also has the acclaim of being the study center for IGNOU programs. BIT is proud to have
+                262 qualified teaching faculties. Among these 100 faculty members are with Ph.D. degree and 56 are
+                pursuing. Sixty percent of faculty members have served BIT for more than twenty years. The Institution
+                has 277 efficient and committed teams of supporting staff.
+            </p>
+        </div>
+
+        <h3>Vision</h3>
+        <div class="trapezoid-about"></div>
+        <p class="abt">
+            Establish and develop the Institute as the Centre of higher learning, ever abreast with expanding horizon of
+            knowledge in the ﬁeld of Engineering and Technology with entrepreneurial thinking, leadership excellence for
+            life-long success and solve societal problems.
+        </p>
+
+        <h3>Mission</h3>
+        <div class="trapezoid-about"></div>
+        <ul class="abt-ul">
+            <li>
+                Provide high quality education in the Engineering disciplines from the undergraduate through doctoral
+                levels with creative academic and professional programs.
+            </li>
+            <li>
+                Develop the Institute as a leader in Science, Engineering, Technology, Management and Research and apply
+                knowledge for the beneﬁt of society.
+            </li>
+            <li>
+                Establish mutual beneﬁcial partnerships with Industry, Alumni, Local, State and Central Governments by
+                Public Service Assistance and Collaborative Research.
+            </li>
+            <li>
+                Inculcate personality development through sports, cultural and extracurricular activities and engage in
+                social, economic and professional challenges.
+            </li>
+        </ul>        
+
+    </div>
+</div>
+{% endblock %}

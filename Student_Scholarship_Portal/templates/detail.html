@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Scholarship Detail
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 mb-5 detail">
+    <h4>{{ scholarship.sName }}</h4>
+    <div class="parallelogram-detail"></div>
+
+    <h5 class="mt-4">About the Programme:</h5>
+    <div class="trapezoid-detail"></div>
+    <p style="white-space: pre-wrap;">{{ scholarship.abt_programme }}</p>
+
+    <h5>Candidate's Eligibility:</h5>
+    <div class="trapezoid-detail"></div>
+    <p style="white-space: pre-wrap;">{{ scholarship.eligibility }}</p>
+
+    <h5>Documents Required:</h5>
+    <div class="trapezoid-detail"></div>
+    <p>
+        The applicants are required to attach the following documents at the time of application -
+    </p>
+    <p style="white-space: pre-wrap;">{{ scholarship.documents_required }}</p>
+
+    <h5>Benefits:</h5>
+    <div class="trapezoid-about" style="width: 50px;"></div>
+    <p>
+        {{ scholarship.benefits }}
+    </p>
+
+    <h5>Deadline:</h5>
+    <div class="trapezoid-about" style="width: 50px;"></div>
+    <p>
+        {{ scholarship.deadline }}
+    </p>
+
+    {% if not user.admin_access %}
+    <div class="mx-auto" style="width: 13%;">
+        <!-- Button trigger modal -->
+        <a href="{{ url_for('applicant_form_page', s_id = scholarship.id) }}">
+            <button class="btn btn-block btn-lg gradient-custom-4 text-body m-4" style="width: 100%;" type="button">
+                Apply Now
+            </button>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

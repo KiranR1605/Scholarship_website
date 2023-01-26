@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Scholarships
+{% endblock %}
+
+{% block content %}
+<div class="container mb-5 add" style="font-size: large;">
+    <div class="card mt-5">
+        <form action="" method="POST">
+            <div class="form-outline mb-4 px-4 pt-3">
+                <label class="form-label d-flex justify-content-center">Scholarship Name</label>
+                <input type="text" name="sName" class="form-control form-control-lg" placeholder="Scholarship Name" required />
+            </div>
+
+            <div class="form-outline mb-4 px-4">
+                <label class="form-label d-flex justify-content-center">About the Programme</label>
+                <textarea name="abt_programme" class="form-control" cols="30" rows="5" placeholder="About the Programme" required></textarea>
+            </div>
+
+            <div class="form-outline mb-4 px-4">
+                <label class="form-label d-flex justify-content-center">Candidate's
+                    Eligibility</label>
+                <textarea name="eligibility" class="form-control" cols="30" rows="5" placeholder="Candidate's Eligibility"
+                    required></textarea>
+            </div>
+
+            <div class="form-outline mb-4 px-4">
+                <label class="form-label d-flex justify-content-center">Documents Required</label>
+                <textarea name="documents_required" class="form-control" cols="30" rows="5" placeholder="Documents Required" required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-outline mb-4 px-4">
+                        <label for="ctc" class="form-label d-flex justify-content-center">Benefits</label>
+                        <input name="benefits" type="text" class="form-control form-control-lg" placeholder="Benefits" required />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-outline mb-4 px-4">
+                        <label for="ctc" class="form-label d-flex justify-content-center">Deadline</label>
+                        <input name="deadline" type="date" class="form-control form-control-lg" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3 mb-5">
+                <button type="submit" name="post-job"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                    Post Scholarship
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

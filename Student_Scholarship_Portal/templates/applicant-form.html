@@ -1,0 +1,570 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Applicant From Page
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('applicant_form_page', s_id = s_id) }}" method="POST" enctype="multipart/form-data">
+    <p class="d-flex justify-content-center">
+        <a class="btn btn-block btn-lg gradient-custom-4 text-body mx-4 mt-4" style="width: 100%;"
+            data-bs-toggle="collapse" data-bs-target="#collapse1" role="button" aria-expanded="false"
+            aria-controls="collapse">
+            <i class="fa-solid fa-pen-to-square"></i> Student Details
+        </a>
+    </p>
+    <div class="collapse show m-4" id="collapse1">
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="d-flex justify-content-center flex-column">
+                    <h4 class="mx-auto">Personal Details</h4>
+                    <div class="parallelogram mb-4 mx-auto"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline mt-4">
+                            <input type="text" name="name" class="form-control form-control-lg" placeholder="Full Name"
+                                required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-2 mb-0">Date Of Birth</label>
+                            <input type="date" name="DOB" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" name="gender">
+                                <option selected disabled>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg"
+                                name="category">
+                                <option selected disabled>Category</option>
+                                <option value="obc">OBC</option>
+                                <option value="gm">GM</option>
+                                <option value="sc">SC</option>
+                                <option value="st">ST</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="USN" class="form-control form-control-lg" placeholder="USN"
+                                required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="email" name="email" class="form-control form-control-lg" placeholder="Email"
+                                required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="phone" class="form-control form-control-lg"
+                                placeholder="Mobile Number" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="income" class="form-control form-control-lg"
+                                placeholder="Annual Family Income From All Sources (Rs)" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-2">Upload Proof Of Identity</label>
+                            <input type="file" name="identity_proof" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-2">Upload Proof Of Income Certificate</label>
+                            <input type="file" name="income_certificate" class="form-control form-control-lg"
+                                required />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="d-flex justify-content-center flex-column">
+                    <h4 class="mx-auto">Communication Address</h4>
+                    <div class="parallelogram mb-4 mx-auto"></div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="form-outline">
+                        <label class="form-label ms-3">Address</label>
+                        <textarea rows="3" name="address"
+                            style="width: 100%; border: #d5d5d5 1px solid; border-radius: 5px;" required></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="pin" class="form-control form-control-lg" placeholder="PIN"
+                                required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="area" class="form-control form-control-lg"
+                                placeholder="Village / Area / Locality" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="district" class="form-control form-control-lg"
+                                placeholder="District" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select name="state" class="form-control form-control-lg">
+                                <option selected disabled>State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-outline mb-4">
+                        <label class="form-label ms-3">Upload Proof Of Address</label>
+                        <input type="file" name="address_proof" class="form-control form-control-lg" required />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="d-flex justify-content-center flex-column">
+                    <h4 class="mx-auto">Bank Details</h4>
+                    <div class="parallelogram mb-4 mx-auto"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="accNo" class="form-control form-control-lg"
+                                placeholder="Account Number" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="IFSC" class="form-control form-control-lg" placeholder="IFSC code"
+                                required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="bName" class="form-control form-control-lg" placeholder="Bank Name"
+                                required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="branch" class="form-control form-control-lg"
+                                placeholder="Bank Branch" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline mt-4">
+                            <input type="text" name="accName" class="form-control form-control-lg"
+                                placeholder="Your Name as per Bank Passbook" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-3 mb-0">Upload Bank Passbook / Statement</label>
+                            <input type="file" name="passbook" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <p class="d-flex justify-content-center">
+        <a class="btn btn-block btn-lg gradient-custom-4 text-body mx-4" style="width: 100%;" data-bs-toggle="collapse"
+            data-bs-target="#collapse2" role="button" aria-expanded="false" aria-controls="collapse">
+            <i class="fa-solid fa-pen-to-square"></i> Current Academic Details
+        </a>
+    </p>
+    <div class="collapse m-4" id="collapse2">
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" name="cLevel">
+                                <option selected disabled>Course Level</option>
+                                <option value="Pre-Primary">Pre-Primary</option>
+                                <option value="Primary and Secondary">Primary and Secondary</option>
+                                <option value="Higher Secondary">Higher Secondary</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Under Graduate">Under Graduate</option>
+                                <option value="Post Graduate/PG Diploma">Post Graduate/PG Diploma</option>
+                                <option value="Professional Certificate">Professional Certificate</option>
+                                <option value="Integrated">Integrated</option>
+                                <option value="Ph.D.">Ph.D.</option>
+                                <option value="ITI">ITI</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="cName" class="form-control form-control-lg"
+                                placeholder="Course Name" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="clgName" class="form-control form-control-lg"
+                                placeholder="Name Of Institution" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select name="cState" class="form-control form-control-lg">
+                                <option selected disabled>State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="tFee" class="form-control form-control-lg"
+                                placeholder="Tution Fees" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="number" name="ntFee" class="form-control form-control-lg"
+                                placeholder="Non-Tution Fees" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label">Upload Fee Receipt</label>
+                            <input type="file" name="fee_receipt" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label">Upload Admission letter</label>
+                            <input type="file" name="admission_letter" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="d-flex justify-content-center">
+        <a class="btn btn-block btn-lg gradient-custom-4 text-body mx-4" style="width: 100%;" data-bs-toggle="collapse"
+            data-bs-target="#collapse3" role="button" aria-expanded="false" aria-controls="collapse">
+            <i class="fa-solid fa-pen-to-square"></i> Educational Details
+        </a>
+    </p>
+    <div class="collapse m-4" id="collapse3">
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="d-flex justify-content-center flex-column">
+                    <h4 class="mx-auto">Class 10</h4>
+                    <div class="parallelogram mb-4 mx-auto"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="name10" class="form-control form-control-lg"
+                                placeholder="Name of Institution" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select name="state10" class="form-control form-control-lg">
+                                <option selected disabled>State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-3 mb-0">Month and Year of Passing</label>
+                            <input type="month" name="pass10" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline mt-4">
+                            <input type="text" name="per10" class="form-control form-control-lg"
+                                placeholder="Percentage" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-outline">
+                        <label class="form-label ms-3">Upload Marksheet</label>
+                        <input type="file" name="marksheet10" class="form-control form-control-lg" required />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card card-body mb-4">
+            <div class="card-body p-md-3 text-black">
+
+                <div class="d-flex justify-content-center flex-column">
+                    <h4 class="mx-auto">Class 12</h4>
+                    <div class="parallelogram mb-4 mx-auto"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <input type="text" name="name12" class="form-control form-control-lg"
+                                placeholder="Name of Institution" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <select name="state12" class="form-control form-control-lg">
+                                <option selected disabled>State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label ms-3 mb-0">Month and Year of Passing</label>
+                            <input type="month" name="pass12" class="form-control form-control-lg" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline mt-4">
+                            <input type="text" name="per12" class="form-control form-control-lg"
+                                placeholder="Percentage" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-outline">
+                        <label class="form-label ms-3">Upload Marksheet</label>
+                        <input type="file" name="marksheet12" class="form-control form-control-lg" required />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mb-5">
+        <button class="btn btn-block btn-lg gradient-custom-5 text-body mx-auto" style="width: 20%;" type="submit">
+            Submit
+        </button>
+    </div>
+
+</form>
+{% endblock %}

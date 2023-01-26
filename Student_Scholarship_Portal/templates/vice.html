@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About Page
+{% endblock %}
+
+{% block content %}
+<div class="row" style="width: 100%;">
+    <div class="col-lg-4">
+        <div class="d-flex flex-column container mt-5 ms-5">
+
+            <a href="{{ url_for('about_page') }}">
+                <button class="button-about mb-4 mt-5">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            About BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+            
+            <a href="{{ url_for('principal_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+            <a href="{{ url_for('vice_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Vice Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="col-lg-8 abt-right ps-5 me-0">
+
+        <h3 class="mt-5">Vice Principal</h3>
+        <div class="trapezoid-about"></div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="ms-3" src="{{ url_for('static', filename='images/viceprincipal.jpg') }}" alt="BIT photo"
+                    width="80%">
+            </div>
+            <div class="col-lg-8">
+                <h3 class="mt-3">Dr. J. Prakash</h3>
+                <p>B.E., M.S., Ph.D, MISTE</p>
+                <hr>
+                <p class="abt">
+                    With the ongoing pandemic of Covid-19 in addition to constantly changing global trends and economic
+                    inflation, we here at BIT make an effort to accomplish sustainable growth in strategy and security
+                    using the hands on application of Engineering and Technology at its best.
+                    <br><br>
+                    Bangalore Institute of Technology (BIT) established by the Rajya Vokkaligara Sangha in the year 1979
+                    is built on the philosophy of education that is grounded in the real world and in the lives of the
+                    students we serve. It is available to every individual, as in the right atmosphere, the change flows
+                    organically from the students themselves.
+                </p>
+            </div>
+            <p class="abt mt-3">
+                This atmosphere requires systematic language change, cultural change and personal change by students,
+                faculty, and all the stakeholders in education as laid foundation by our Institution.
+                <br><br>
+                Our goal is to establish equitable access to learning opportunities and skill acquisition with
+                diversification, using a wide range of education and training modalities, so that all the students can
+                acquire relevant knowledge, skills and competencies for decent work and life.
+                <br><br>
+                BIT’s record growth has been one of the continuous improvement and evolution - taking measured risks,
+                making timely entries into scientifically important and viable areas, investing in enterprises which are
+                multi-dimensional in scope and capable of rapid growth, pursuing a strategy based on value thus
+                achieving its objectives of enhanced productivity, whilst providing an open and flexible framework for
+                expansion.
+                <br><br>
+                I sincerely welcome you to Bangalore Institute of Technology (BIT) where we hone the best of facilities,
+                well-equipped labs, research centres, workshops, libraries and well defined faculty. We strive hard to
+                aim for overall growth of the students with vibrant campus life. The MOU with more than 100 companies
+                supports industrial internships and learning. The Placement & Training Centre pursues leadership skills
+                to establish entrepreneurship at the earliest.
+                <br><br>
+                B.I.T is affiliated to Visvesvaraya Technological University (VTU), Karnataka and approved by AICTE New
+                Delhi. All 10 UG programs and MCA are accredited by National Board of Accreditation (NBA), New Delhi.
+                BIT is also recognised under section 2 (f) & 12(B) of the UGC Act 1956. As per National Institutional
+                Ranking Framework of Ministry of Human Resource Development, Government of India (NIRF) India Rankings
+                2020, BIT is in the Rank-band: 201-250 under Engineering. We are proud to announce that we received
+                Grade ‘A+’ in the accreditation process of NAAC.
+                <br><br>
+                As an Institution dedicated to educating our future contributors and leaders, and learning from each
+                other, we encourage one another to foster a community free of intolerance and discrimination, and to
+                promote a campus climate that is respectful, civil, supportive, and safe. These core values allow us to
+                provide a learning environment where we can all pursue our dreams and reach our highest potential with
+                fair code of discipline
+                <br><br>
+                Let us seek and provide holistic entirety of Knowledge, Comprehension, Application, Analysis, Synthesis,
+                and Evaluation in all aspects of our life and become a humane, successful citizen of our Nation.
+                <br><br>
+                “No one person can shape the life of another. Your success and happiness depend upon your own self.
+                Think for yourself and have a plan of life” – Sir M Visvesvaraya
+                <br><br>
+                Best regards
+                <br><br>
+                <b><em>Dr. J. Prakash</em></b>
+                <br>
+                B.E., M.S., Ph.D, MISTE
+                <br>
+                Vice Principal,
+                <br>
+                9845070991
+                <br>
+                jogaiahprakash@gmail.com
+                <br>
+                BIT, Bangalore.
+            </p>
+        </div>     
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Schemes and Scholarships
+{% endblock %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-4 g-5 mx-5 mb-5 px-3 schl-page">
+  {% for scholarship in scholarships %}
+  <div class="col">
+    <div class="card" style="border: none">
+      <div class="face face1">
+        <div class="content">
+          <h6>{{ scholarship.sName }}</h6>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p class="schl">{{ scholarship.abt_programme }}</p>
+          <p>Benifits: {{ scholarship.benefits }}</p>
+          <a href="{{ url_for('detail_page', s_id = scholarship.id) }}"
+            class="btn btn-toolbar d-flex justify-content-center">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

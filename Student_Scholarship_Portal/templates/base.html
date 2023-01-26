@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap CSS cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+
+        <!-- Font awesome cdn -->
+        <script src="https://kit.fontawesome.com/25bec9b726.js" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <!-- Javascript -->
+        <script src="{{url_for('static', filename='javascript/index.js')}}"></script>
+
+        <!-- DataTable CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+
+        <!-- DataTable JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c7d0d5">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <a class="navbar-brand mx-5" href="https://bit-bangalore.edu.in/">
+                    <img src="{{ url_for('static', filename='images/bit logo.png') }}" height="50" alt="BIT Logo"
+                        loading="lazy" style="margin-top: -1px" />
+                </a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons"
+                    aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtons">
+                    {% if user.is_authenticated %}
+                    {% if user.admin_access %}
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-items">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link fw-bold" href="{{ url_for('add_page') }}">Add Scholarship</a>
+                        </li>
+                        <li class="nav-item ms-4">
+                            <a class="nav-link fw-bold" href="{{ url_for('view_page') }}">View Scholarship</a>
+                        </li>
+                        <li class="nav-item ms-4">
+                            <a class="nav-link fw-bold" href="{{ url_for('student_page') }}">Students Applied</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right links -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('logout_page') }}">
+                            <button type="button" class="btn btn-link px-3 me-5" style="text-decoration: none">
+                                Logout
+                            </button>
+                        </a>
+                    </div>
+                    {% else %}
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-items">
+                        <li class="nav-item ms-2">
+                            <a class="nav-link active fw-bold" href="{{ url_for('scholarship_page') }}">Schemes and
+                                Scholarships</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right links -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('faq_page') }}">
+                            <button type="button" class="btn btn-link px-3 me-5" style="text-decoration: none; color: gray;">
+                                FAQ's
+                            </button>
+                        </a>
+                        <a href="{{ url_for('logout_page') }}">
+                            <button type="button" class="btn btn-link px-3 me-5" style="text-decoration: none">
+                                Logout
+                            </button>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% else %}
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-items">
+                        <li class="nav-item ms-2">
+                            <a class="nav-link fw-bold" href="{{ url_for('home_page') }}">HOME</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link fw-bold" href="{{ url_for('contact_page') }}">CONTACT US</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link fw-bold" href="{{ url_for('about_page') }}">ABOUT US</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link fw-bold" href="{{ url_for('QA_page') }}">Q&A</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right links -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('login_page') }}">
+                            <button type="button" class="btn btn-link px-3" style="text-decoration: none">
+                                Login
+                            </button>
+                        </a>
+                        <a href="{{ url_for('register_page') }}">
+                            <button type="button" class="btn btn-link me-2"
+                                style="text-decoration: none; border-left: gray 1px solid; border-radius: 0;">
+                                Sign up
+                            </button>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+
+        {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="m-0 alert alert-{{ category }} alert-dismissible fade show d-flex justify-content-center" role="alert" style="border-radius: 0;">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {% block content %} {% endblock %}
+
+    </body>
+
+</html>

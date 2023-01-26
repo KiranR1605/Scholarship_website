@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Application Page
+{% endblock %}
+
+{% block content %}
+<div class="container my-5" style="border: 2px solid #d5d5d5; border-radius: 10px;">
+    <div class="d-flex justify-content-center align-items-center flex-column mt-4">
+        <h5>PERSONAL INFORMATION</h5>
+        <div class="parallelogram" style="width: 200px;"></div>
+    </div>
+    <div class="row p-4">
+        <div class="col-md-6">
+            <p>Name: {{ applicant.name }}</p>
+            <p>DOB: {{ applicant.DOB }}</p>
+            <p>Gender: {{ applicant.gender }}</p>
+            <p>Category: {{ applicant.category }}</p>
+            <p>Identity Proof: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="identity">Download</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p>USN: {{ applicant.USN }}</p>
+            <p>Email: {{ applicant.email }}</p>
+            <p>Phone No.: {{ applicant.phone }}</p>
+            <p>Income: {{ applicant.income }}</p>
+            <p>Income Certificate: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="income">Download</button>
+            </form>
+        </div>
+    </div>
+    <hr class="m-0">
+    <div class="row p-4">
+        <div class="col-md-6">
+            <div class="mb-4 d-flex justify-content-center align-items-center flex-column mt-4">
+                <h5>ADDRESS</h5>
+                <div class="parallelogram"></div>
+            </div>
+            <p>Address: {{ applicant.address }}</p>
+            <p>PIN: {{ applicant.pin }}</p>
+            <p>Area: {{ applicant.area }}</p>
+            <p>District: {{ applicant.district }}</p>
+            <p>State: {{ applicant.state }}</p>
+            <p>Address Proof: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="address">Download</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-4 d-flex justify-content-center align-items-center flex-column mt-4">
+                <h5>BANK DETAILS</h5>
+                <div class="parallelogram"></div>
+            </div>
+            <p>Account No.: {{ bank.accNo }}</p>
+            <p>IFSC Code: {{ bank.IFSC }}</p>
+            <p>Bank Name: {{ bank.bName }}</p>
+            <p>Bank Branch: {{ bank.branch }}</p>
+            <p>Name as per account: {{ bank.accName }}</p>
+            <p>Pasbook: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="passbook">Download</button>
+            </form>
+        </div>
+    </div>
+    <hr class="m-0">
+    <div class="mb-2 d-flex justify-content-center align-items-center flex-column mt-4">
+        <h5>EDUCATION</h5>
+        <div class="parallelogram"></div>
+    </div>
+    <div class="row pb-4 px-4">
+        <div class="col-md-6">
+            <div class="mb-4 d-flex justify-content-center align-items-center flex-column mt-4">
+                <h5>CLASS 10</h5>
+                <div class="parallelogram" style="width: 70px;"></div>
+            </div>
+            <p>School Name: {{ education.name10 }}</p>
+            <p>State: {{ education.state10 }}</p>
+            <p>Passing month and year: {{ education.pass10 }}</p>
+            <p>Percentage/GPA: {{ education.per10 }}</p>
+            <p>Marksheet: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="class10">Download</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-4 d-flex justify-content-center align-items-center flex-column mt-4">
+                <h5>CLASS 12</h5>
+                <div class="parallelogram" style="width: 70px;"></div>
+            </div>
+            <p>School Name: {{ education.name12 }}</p>
+            <p>State: {{ education.state12 }}</p>
+            <p>Passing month and year: {{ education.pass12 }}</p>
+            <p>Percentage/GPA: {{ education.per12 }}</p>
+            <p>Marksheet: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="class12">Download</button>
+            </form>
+        </div>
+    </div>
+    <hr class="m-0">
+    <div class="row pb-4 px-4">
+        <div class="mb-4 d-flex justify-content-center align-items-center flex-column mt-4">
+            <h5>CURRENT EDUCATION</h5>
+            <div class="parallelogram"></div>
+        </div>
+        <div class="col-md-6">
+            <p>Course Level: {{ Ceducation.cLevel }}</p>
+            <p>College Name: {{ Ceducation.clgName }}</p>
+            <p>Tution Fee: {{ Ceducation.tFee }}</p>
+            <p>Fee Receipt: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="fee">Download</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <p>Course Name: {{ Ceducation.cName }}</p>
+            <p>State: {{ Ceducation.cState }}</p>
+            <p>Non-Tution Fee: {{ Ceducation.ntFee }}</p>
+            <p>Admission Letter: <small><small>Click the below button to download.</small></small></p>
+            <form action="{{ url_for('application', a_id = applicant.id) }}" method="POST" enctype="multipart/form-data">
+                <button class="btn btn-success mb-3 btn-small" type="submit" name="btn" value="admission">Download</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

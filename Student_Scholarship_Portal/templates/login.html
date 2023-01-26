@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login Page
+{% endblock %}
+
+{% block content %}
+<section class="vh-100 bg-img">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-5">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="logo">
+                                <img class="logo-img" src="{{url_for('static', filename='images/bitlogo.png')}}"
+                                    alt="BIT LOGO" style="text-shadow: 2px 2px white;">
+                            </div>
+
+                            <h3 class="mb-2">LOGIN</h3>
+
+                            <p class="mb-5" style="color: #393f81;">
+                                Please enter E-mail and Password!
+                            </p>
+
+                            <!-- Login form -->
+                            <form action="" method="POST">
+
+                                <!-- Input Email -->
+                                <div class="form-outline mb-4">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Email"
+                                        name="email" required />
+                                </div>
+
+                                <!-- Input Password -->
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="login-password" class="form-control form-control-lg"
+                                        placeholder="Password" name="password" required />
+                                </div>
+                                
+                                <!-- Login button -->
+                                <div class="d-grid">
+                                    <button class="btn btn-light btn-lg btn-block mt-1 gradient-custom-4" type="submit"
+                                        name="login">LOGIN</button>
+                                </div>
+
+                                <!-- Redirect to registration form -->
+                                <div class="form-outline mb-4">
+                                    <p class="mt-5 pb-lg-0" style="color: #393f81;">
+                                        Don't have an account?
+                                        <a class="fw-bold" href="{{ url_for('register_page') }}" style="color: #393f81;"> Register here</a>
+                                    </p>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

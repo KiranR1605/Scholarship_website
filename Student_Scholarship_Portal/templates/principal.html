@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About Page
+{% endblock %}
+
+{% block content %}
+<div class="row" style="width: 100%;">
+    <div class="col-lg-4">
+        <div class="d-flex flex-column container mt-5 ms-5">
+
+            <a href="{{ url_for('about_page') }}">
+                <button class="button-about mb-4 mt-5">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            About BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+            
+            <a href="{{ url_for('principal_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+            <a href="{{ url_for('vice_page') }}">
+                <button class="button-about mb-4">
+                    <div class="row">
+                        <div class="col-lg-2 about">
+                            <p><i class="fa-solid fa-angles-right"></i></p>
+                        </div>
+                        <div class="col-lg-10">
+                            Vice Principal BIT
+                        </div>
+                    </div>
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="col-lg-8 abt-right ps-5 me-0">
+
+        <h3 class="mt-5">Principal</h3>
+        <div class="trapezoid-about"></div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="ms-3" src="{{ url_for('static', filename='images/principal.jpg') }}" alt="BIT photo"
+                    width="80%">
+            </div>
+            <div class="col-lg-8">
+                <h3 class="mt-3">Dr. Aswath M U</h3>
+                <p>B.E., M.E., Ph.D., FACCE, MICI, FIEI, MISTE, MACI</p>
+                <hr>
+                <p class="abt">
+                    The world has gone through critical times due to the pandemic COVID-19 and it is the need of the
+                    hour to change ourselves, to recreate the future for our society, to use technology to manage and
+                    monitor our health and to take care of our environment for a better tomorrow. At BIT we are creating
+                    awareness and taking all efforts to educate our students to address these challenges. The present
+                    industry and the society demand more from the higher educational institutes and hence we must relook
+                    at our thinking, our actions, and our way of education systems and skilling the future engineers.
+                </p>
+            </div>
+            <p class="abt mt-3">
+                We are keenly following the NEP 2020 and implementing the policy in letter and spirit at BIT as per the
+                guidelines of AICTE and VTU
+                <br><br>
+                The 17 Sustainable Development Goals (SDGs) of United Nations cover social, economic and environmental
+                dimensions of development. The focus of all these SDGs is to end poverty in all its forms and
+                dimensions. Quality education is very essential and forms the foundation of sustainable development.
+                Quality education also enables self-reliance, boosts economic growth by enhancing skills, and improves
+                people’s lives by opening up opportunities for better livelihoods.
+                <br><br>
+                The 4th SDG is to “Ensure inclusive and equitable quality education and promote lifelong learning
+                opportunities for all.” The National Education Policy (NEP), 2020 is introducing several changes in the
+                Indian education system and aims at making “India a global knowledge superpower”. It is the
+                responsibility of all of us in the education sector to participate actively in achieving the objectives
+                stated above by the competent authorities.
+                <br><br>
+                At BIT we are consciously involving ourselves in the process of educating the future engineers to face
+                the challenges. Bangalore Institute of Technology (BIT) established by the Rajya Vokkaligara Sangha and
+                is one of the sought-after institutes for engineering education in the country. The foundation of
+                Bangalore Institute of Technology was laid in the year 1979 by the great national poet Kuvempu.
+                Kuvempu's well known lines “ಓ ನನ್ನ ಚೇತನ ಆಗು ನೀ ಅನಿಕೇತನ – O Nanna Chetana, Aagu Nee Aniketana” (Be
+                unhoused O my soul, only the inﬁnite is your goal") is embedded in the environment of BIT.
+                <br><br>
+                It is my pleasure to welcome you all to BIT. We have well-equipped labs, research centres, workshops,
+                Libraries and excellent faculty. Sports facilities and about 30 student support activity clubs are
+                available for the overall personality development of both students and faculty. The MOU’s with more than
+                100 companies, Skill development centres, Idea Lab, stat up centre, centres of excellences, science
+                centre etc. facilitates industrial internships and experiential learning.
+                <br><br>
+                The training and placement centre has a well-established industry network of more than 300 companies
+                with a very good placement record. The training centre provides necessary skill development and
+                organizes leadership and entrepreneurship orientation programmes.
+                <br><br>
+                B.I.T is affiliated to Visvesvaraya Technological University (VTU), Karnataka and approved by AICTE New
+                Delhi. Nine UG programs are accredited by National Board of Accreditation (NBA), New Delhi. BIT is also
+                recognized under section 2 (f) and 12(B) of the UGC Act 1956. As per National Institutional Ranking
+                Framework of Ministry of Human Resource Development, Government of India (NIRF) India Rankings 2020, BIT
+                is in the Rank-band: 251-300, and 201-250 during 2019 under Engineering. We are also very happy to
+                receive accreditation by NAAC with A+ grade.
+                <br><br>
+                Keeping the industry requirements, innovation and start up culture and the future sustainability trends,
+                the students graduating from our institute are trained in diverse knowledge and skills in the areas of
+                their studies and will have a broad understanding of industry and societal needs. Their character will
+                be nurtured and developed into a social engineer, a responsible citizen and a valued human being.
+                <br><br>
+                With the support of highly qualiﬁed faculty members, supportive staff, sound placement achievements and
+                excellent infrastructure facilities, BIT is committed to develop a community of learnt scholars for a
+                better tomorrow.
+                <br><br>
+                We keep striving to create a holistic learning environment for our students to excel in their careers. I
+                extend my best wishes to all our students to realize their dreams.
+                <br><br>
+                With Best Regards
+                <br><br>
+                <b><em>Prof. Aswath M U</em></b>
+                <br><br>
+                Principal & Director
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

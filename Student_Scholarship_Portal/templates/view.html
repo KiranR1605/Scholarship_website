@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+View Scholarships
+{% endblock %}
+
+{% block content %}
+<div class="my-5 ps-3 mx-0" style="width: 99.2%;">
+    <table class="table table-striped table-hover align-middle display" id="myTable">
+        <thead>
+            <tr>
+                <th class="table-active" scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Benefits</th>
+                <th scope="col">Deadline</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for scholarship in scholarships %}
+            <tr>
+                <td class="table-active">{{ loop.index }}</td>
+                <td>{{ scholarship.sName }}</td>
+                <td>{{ scholarship.benefits }}</td>
+                <td>{{ scholarship.deadline }}</td>
+                <td>
+                    <div class="m-0" style="background-color: #d5d5d5; border-radius: 7px;">
+                        <a class="btn btn-toolbar d-flex justify-content-center m-0"
+                            href="{{ url_for('detail_page', s_id = scholarship.id) }}">
+                            View Details
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="m-0" style="background-color: red; border-radius: 7px;">
+                        <a class="btn btn-toolbar d-flex justify-content-center m-0"
+                            href="{{ url_for('delete_scholarship', s_id = scholarship.id) }}">
+                            <strong>Delete</strong>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

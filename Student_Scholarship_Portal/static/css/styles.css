@@ -1,0 +1,423 @@
+.pass {
+    position: relative;
+    bottom: 55px;
+    right: 15px;
+}
+
+.gradient-custom-3 {
+    background: #84fab0;
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+}
+
+.gradient-custom-4 {
+    background: #84fab0;
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+}
+
+.gradient-custom-5 {
+    background: #84fab0;
+    background: -webkit-linear-gradient(to right, #3E5151, #DECBA4);
+    background: linear-gradient(to right, #3E5151, #DECBA4);
+}
+
+.carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin: 5px;
+}
+
+#carousel1 .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin: 5px;
+    background-color: #490009;
+}
+
+.intro {
+    background-color: #e3f2fd;
+    border: 3px solid #e3f2fd;
+    box-shadow: 10px 10px 8px 8px #e3f2fd, -10px -10px 8px 8px #e3f2fd;
+}
+
+.steps .icons {
+    font-size: 5rem;
+}
+
+.steps .step {
+    font-size: 1.5rem;
+}
+
+.steps .arrow {
+    font-size: 2.5rem;
+}
+
+.navbar-items {
+    text-align: center;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.trapezoid {
+    border-bottom: 3.5px solid #490009;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    height: 0;
+    width: 80px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.trapezoid-about {
+    height: 0px;
+    width: 80px;
+    border-top: 3.5px solid #490009;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-bottom: 15px;
+}
+
+.trapezoid-detail {
+    height: 0px;
+    width: 150px;
+    border-top: 3.5px solid #490009;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-bottom: 15px;
+}
+
+.contact-heading .parallelogram {
+    width: 200px;
+    height: 3px;
+    transform: skew(40deg);
+    background: #555;
+    background-image: linear-gradient(95.2deg, rgba(173, 252, 234, 1) 26.8%, rgba(192, 229, 246, 1) 64%);
+}
+
+.parallelogram {
+    width: 100px;
+    height: 3px;
+    transform: skew(40deg);
+    background: #555;
+    background-image: linear-gradient(to right, #870000, #190a05);
+}
+
+.parallelogram-detail {
+    width: 500px;
+    height: 3px;
+    transform: skew(40deg);
+    background: #555;
+    background-image: linear-gradient(to right, #870000, #190a05);
+}
+
+.parallelogram-home {
+    width: 300px;
+    height: 3px;
+    transform: skew(40deg);
+    background: #555;
+    background-image: linear-gradient(to right, #870000, #190a05);
+}
+
+.button {
+    float: left;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.button:hover {
+    width: 150px;
+}
+
+.button:nth-child(1):hover .icon {
+    background: #e1306c;
+}
+
+.button:nth-child(2):hover .icon {
+    background: #4267b2;
+}
+
+.button:nth-child(3):hover .icon {
+    background: #1da1f2;
+}
+
+.button:nth-child(4):hover .icon {
+    background: #0e76a8;
+}
+
+.button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.button:nth-child(6):hover .icon {
+    background: #333;
+}
+
+.button:nth-child(1) span {
+    color: #e1306c;
+}
+
+.button:nth-child(2) span {
+    color: #4267b2;
+}
+
+.button:nth-child(3) span {
+    color: #1da1f2;
+}
+
+.button:nth-child(4) span {
+    color: #0e76a8;
+}
+
+.button:nth-child(5) span {
+    color: #ff0000;
+}
+
+.button:nth-child(6) span {
+    color: #333;
+}
+
+.button .icon {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.button .icon i {
+    font-size: 20px;
+    line-height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover i {
+    color: #fff;
+}
+
+.social-icons .button {
+    margin: 10px;
+}
+
+.social-icons a {
+    color: black;
+}
+
+.about {
+    height: 15px;
+}
+
+.abt-right {
+    border-left: #d5d5d5 1px solid;
+}
+
+.abt-img {
+    width: 100%;
+}
+
+.abt-ul {
+    list-style-type: circle;
+    font-size: 0.9rem;
+}
+
+.abt {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.button-about {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: gray 1px solid;
+    width: 70%;
+    margin: auto;
+}
+
+.button-about:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -2;
+}
+
+.button-about:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #800000;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.button-about:hover {
+    color: #fff;
+}
+
+.button-about:hover:before {
+    width: 100%;
+}
+
+.testimonial-img {
+    width: 10%;
+    margin: 20px;
+    border-radius: 100%;
+}
+
+.schl-page .collapse .card {
+    margin-bottom: 10px;
+}
+
+.schl {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.faq .btn {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+textarea {
+    white-space: pre;
+}
+
+.add input,
+textarea {
+    box-shadow: rgba(50, 50, 93, 0.05) 0px 18px 30px -12px inset, rgba(0, 0, 0, 0.05) 0px 18px 30px -12px inset;
+}
+
+.add .card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;-shadow: rgba(50, 50, 93, 0.2) 30px 30pboxx 60px -12px, rgba(0, 0, 0, 0.05) -30px 18px 36px -12px;
+}
+
+.step-img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.schl-page .card {
+    margin: 0;
+}
+
+.schl-page .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+
+.schl-page .card .face.face1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    background-color: #f2f8f9;
+}
+
+.schl-page .card:hover .face.face1{
+    background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%);
+    transform: translateY(0);
+    border-radius: 10px 10px 0 0;
+}
+
+.schl-page .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+.schl-page .card .face.face1 .content h6{
+    margin: 10px 0 0;
+    padding: 0 10px;
+    color: #333;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.schl-page .card:hover .face.face1 .content h6 {
+    color: white;
+}
+
+.schl-page .card .face.face2{
+    position: relative;
+    background: #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-100px);
+}
+
+.schl-page .card:hover .face.face2{
+    transform: translateY(0);
+    color: #333;
+    border-radius: 0 0 10px 10px;
+}
+
+.schl-page .card .face.face2 .content p{
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.schl-page .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px;
+}
+
+.schl-page .card:hover .face.face2 .content a{
+    background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%);
+    margin-bottom: 10px;
+}
+
+#grad1 {
+    background-color: #9C27B0;
+    background-image: linear-gradient(120deg, #FF4081, #81D4FA);
+}
