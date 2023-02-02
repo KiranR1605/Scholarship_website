@@ -46,5 +46,15 @@ Scholarship Detail
         </a>
     </div>
     {% endif %}
+    {% if user.admin_access %}
+    <div class="mx-auto" style="width: 13%;">
+        <!-- Button trigger modal -->
+        <a href="{{ url_for('scholarship_list_page', s_id = scholarship.id) }}">
+            <button class="btn btn-block btn-lg gradient-custom-4 text-body m-4" style="width: 100%;" type="button">
+                View Applicants
+            </button>
+        </a>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

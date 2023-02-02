@@ -371,3 +371,10 @@ def delete_application(a_id):
     db.session.commit()
         
     return redirect(url_for('student_page'))
+
+@app.route('/list/<s_id>')
+@login_required
+def scholarship_list_page(s_id):
+    applicants = Applicant.query.filter_by(scholarship_id = s_id).all()
+    scholarship = Scholarship.query.filter_by(id = s_id).first()
+    return render_template('list.html', user = current_user, applicants = applicants, scholarship = scholarship)

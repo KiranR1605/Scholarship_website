@@ -32,7 +32,7 @@ Applicant From Page
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label ms-2 mb-0">Date Of Birth</label>
-                            <input type="date" name="DOB" class="form-control form-control-lg" required />
+                            <input type="date" name="DOB" onkeydown="return false" min="1987-01-01" max="2008-12-31" class="form-control form-control-lg" required />
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ Applicant From Page
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                            <input type="number" name="phone" class="form-control form-control-lg"
+                            <input type="text" name="phone" class="form-control form-control-lg"
                                 placeholder="Mobile Number" required />
                         </div>
                     </div>
@@ -454,7 +454,7 @@ Applicant From Page
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label ms-3 mb-0">Month and Year of Passing</label>
-                            <input type="month" name="pass10" class="form-control form-control-lg" required />
+                            <input type="month" name="pass10"  onkeydown="return false" min="2003-01" max="2022-12" class="form-control form-control-lg" required />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
@@ -538,7 +538,7 @@ Applicant From Page
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label ms-3 mb-0">Month and Year of Passing</label>
-                            <input type="month" name="pass12" class="form-control form-control-lg" required />
+                            <input type="month" onkeydown="return false" min="2005-01" max="2022-12" name="pass12" class="form-control form-control-lg" required />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
